@@ -1,0 +1,55 @@
+
+.container-fluid{
+    width: 100%;
+    max-height: 100vh;
+    background-color: coral;
+}
+
+main{
+    height: calc(100vh - 80px);
+    background-color:darkorange;;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col-lg{
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+
+main .sidebar{
+    background-color: rgb(196, 182, 182);
+}
+
+
+main .content{
+    background-color: #141922;
+    height: 100%;
+    overflow-y: scroll
+}
+
+.topbar{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(45, 45, 180, 0.5);
+
+}
+
+
+footer{
+    height: 80px;
+    background-color:cornflowerblue;
+}
+
+
+/* .example{
+    margin: 0 auto;
+    width: 300px;
+    height: 200vh;
+} */
