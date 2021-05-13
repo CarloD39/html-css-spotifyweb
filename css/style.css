@@ -127,6 +127,7 @@ footer{
     background-color: #282828;
     position: relative;
     display: flex;
+    color: white;
 }
 
 footer .picture, .play-timing, .volume{
@@ -149,6 +150,10 @@ footer .play-timing{
     margin: 10px 10px 0 10px;
 }
 
+.bar-song > span{
+    font-size: 12px;
+}
+
 .picture , .volume{
     flex-basis: 280px;
     max-width: 280px;
@@ -167,9 +172,17 @@ footer .volume{
     margin-left: 10px;
 }
 
-.picture-footer-name{
-    max-width: 82.2px; 
+.picture-details{
     margin-left: 10px;
+}
+
+.picture-footer-name{ 
+    font-size: 18px;
+}
+
+.picture-details div:last-child{
+    font-size: 14px;
+    color: gray;
 }
 
 .control-play{
@@ -182,11 +195,13 @@ footer .volume{
 #heart::before{
     content: "\f004";
     margin-left: 30px;
+    color: gray;
 }
 
 #folder::before{
     content: "\f07b";
-    margin-left: 5px;
+    margin-left: 15px;
+    color: gray;
 }
 
 #random::before{
@@ -235,7 +250,7 @@ footer .volume{
 #volum-bar{
     height: 1px;
     width: 100px;
-    border: 1px solid white;
+    border: 1px solid gray;
     margin: 0 10px 0 20px;
 }
 
