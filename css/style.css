@@ -1,4 +1,16 @@
 
+span::before{
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-weight: 900;
+    font-size: 16px;
+    color: white;
+}
+
+
+
+
+/* ---------------utility provvsoria */
 .container-fluid{
     width: 100%;
     max-height: 100vh;
@@ -25,6 +37,7 @@ main{
 main .sidebar{
     background-color: rgb(196, 182, 182);
     padding: 20px 0 0 15px;
+    height: calc(100vh - 80px);
 }
 
 ul{
@@ -68,8 +81,10 @@ ul{
     text-align: right;
     padding: 20px 20px;
     position: fixed;
+    z-index: 1000;
     height: 80px;
     width: calc(100% - 266.67px);
+    min-width: calc(100% - 266.67px);
     flex-basis: 100%;
     background-color: rgb(45, 45, 180, 0.9);
 }
@@ -100,9 +115,8 @@ ul{
 
 .albums{
     margin: 0 auto;
-    width: 1250px;
+    width: 600px;
     height: 400vh;
-    border: 2px solid white;
 }
 
 
@@ -111,19 +125,128 @@ ul{
 footer{
     height: 80px;
     background-color: #282828;
+    position: relative;
     display: flex;
-    justify-content: space-between;
 }
 
-footer ul{
+footer .picture, .play-timing, .volume{
     display: flex;
     list-style: none;
     align-items: center;
 }
 
+footer .play-timing{
+    flex-direction: column;
+}
 
-/* .example{
-    margin: 0 auto;
-    width: 300px;
-    height: 200vh;
-} */
+.bar-song{
+    display: flex;
+}
+.bar-song div{
+    height: 1px;
+    width: 400px;
+    border: 1px solid white;
+    margin: 10px 10px 0 10px;
+}
+
+.picture , .volume{
+    flex-basis: 280px;
+    max-width: 280px;
+    border: 1px solid white;
+}
+
+footer .volume{
+    justify-content: flex-end;
+}
+
+.picture-footer{
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/sinister.jpeg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.picture-footer-name{
+    max-width: 82.2px; 
+    margin-left: 10px;
+}
+
+.control-play{
+    display: flex;
+    margin-top: 15px;  
+}
+
+
+/* span content footer */
+#heart::before{
+    content: "\f004";
+    margin-left: 30px;
+}
+
+#folder::before{
+    content: "\f07b";
+    margin-left: 5px;
+}
+
+#random::before{
+    content: "\f074";
+}
+
+#go-back::before{
+    content: "\f048";
+}
+
+#play-song::before{
+    content: "\f144";
+    font-size: 25px;
+}
+
+.play-timing{
+    flex-grow: 1;
+    border: 1px solid white;
+}
+
+#go-foward::before{
+    content: "\f051";
+}
+
+#repeat::before{
+    content: "\f01e";
+}
+
+#list-songs::before{
+    content: "\f0c9";
+}
+
+#tv::before{
+    content: "\f26c";
+}
+
+#volum::before{
+    content: "\f028";
+}
+
+.control-play span{
+    margin-left: 20px;
+    line-height: 25px;
+}
+
+#volum-bar{
+    height: 1px;
+    width: 100px;
+    border: 1px solid white;
+    margin: 0 10px 0 20px;
+}
+
+.volume span{
+    margin-left: 20px;
+}
+
+/* finish span content */
+
+
+
+
+
+

@@ -66,6 +66,15 @@
   .col-md-offset-10 {margin-left: calc((100% / 12) * 10);}
   .col-md-offset-11 {margin-left: calc((100% / 12) * 11);}
 
+  /* footer */
+  #heart::before{
+    font-size: 8px;
+  }
+
+  .bar-song div{
+    width: 100px;
+  }
+
 }
 
 
@@ -102,5 +111,7 @@
     .col-sm-offset-10 {margin-left: calc((100% / 12) * 10);}
     .col-sm-offset-11 {margin-left: calc((100% / 12) * 11);}
 
+
+  
 }
     
