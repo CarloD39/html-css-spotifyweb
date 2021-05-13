@@ -24,34 +24,67 @@ main{
 
 main .sidebar{
     background-color: rgb(196, 182, 182);
+    padding: 20px 0 0 15px;
+}
+
+ul{
+    list-style: none;
 }
 
 
-main .content{
+.logo{
+    display: flex;
+    line-height: 50px;
+    padding-bottom: 20px;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  background-image: url(../img/logo.svg);
+  background-size: cover;
+}
+
+.menu{
+    padding-bottom: 20px;
+    line-height: 30px;
+}
+
+.playlist li{
+    line-height: 30px;
+}
+
+
+/* -------------------------------------------------------- */
+.content{
     background-color: #141922;
     height: 100%;
     overflow-y: scroll
+    
 }
-/* ---------------------------------- */
+/* -----------------------*/
 .topbar{
     text-align: right;
-    padding: 20px 5px;
+    padding: 20px 20px;
     position: fixed;
     height: 80px;
     width: calc(100% - 266.67px);
-    background-color: rgb(45, 45, 180, 0.5);
+    flex-basis: 100%;
+    background-color: rgb(45, 45, 180, 0.9);
 }
 
 .topbar button{
-   padding: 8px 12px;
+   padding: 8px 20px;
    border-radius: 15px;
 }
-/* ---------------------------------------- */
+/* ---------------------- */
+
+
 .page nav{
     margin: 90px auto;
     border: 1px solid white;
 }
-
 
 .page nav ul{
     display: flex;
@@ -61,13 +94,20 @@ main .content{
     justify-content: center;
 }
 
-ul li{
+ nav ul li{
  margin-left: 30px;
+}
+
+.albums{
+    margin: 0 auto;
+    width: 1250px;
+    height: 400vh;
+    border: 2px solid white;
 }
 
 
 
-/* --------------------------- */
+/* ------------------------------------------------------------ */
 footer{
     height: 80px;
     background-color: #282828;
