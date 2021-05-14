@@ -153,44 +153,40 @@ hr{
 .content{
     background-color: #141922;
     height: 100%;
-    overflow-y: scroll
-    
+    overflow-y: scroll;    
 }
 /* -----------------------*/
+
 .topbar{
     text-align: right;
     padding: 20px 20px;
     position: fixed;
-    z-index: 1000;
+    width: 100%;
     height: 80px;
-    width: calc(100% - 266.67px);
-    min-width: calc(100% - 266.67px);
-    flex-basis: 100%;
     background-color: rgb(45, 45, 180, 0.9);
 }
 
 .topbar button{
-   padding: 8px 20px;
-   border-radius: 15px;
+    padding: 8px 20px;
+    border-radius: 15px;
 }
 /* ---------------------- */
 
 
-.page nav{
+.content nav{
     margin: 90px auto;
     border: 1px solid white;
 }
 
-.page nav ul{
+.content nav ul{
     display: flex;
-    flex-grow: 1;
     list-style: none;
     color: white;
     justify-content: center;
 }
 
  nav ul li{
- margin-left: 30px;
+    margin-left: 30px;
 }
 
 .albums{
@@ -222,10 +218,11 @@ footer .play-timing{
 
 .bar-song{
     display: flex;
+    flex-grow: 1;
 }
 .bar-song div{
     height: 1px;
-    width: 400px;
+    min-width: 300px;
     border: 1px solid white;
     margin: 10px 10px 0 10px;
 }
@@ -235,9 +232,8 @@ footer .play-timing{
 }
 
 .picture , .volume{
-    flex-basis: 280px;
-    max-width: 280px;
-    /* border: 1px solid white; */
+    flex-basis: 230px;
+    border: 1px solid white;
 }
 
 footer .volume{
@@ -299,6 +295,7 @@ footer .volume{
 
 .play-timing{
     flex-grow: 1;
+    flex-basis: 40%;
     /* border: 1px solid white; */
 }
 
@@ -329,7 +326,9 @@ footer .volume{
 
 #volum-bar{
     height: 1px;
-    width: 100px;
+    flex-grow: 1;
+    flex-basis: 50px;
+    min-width: 50px;
     border: 1px solid gray;
     margin: 0 10px 0 20px;
 }
