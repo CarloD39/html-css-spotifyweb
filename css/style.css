@@ -3,8 +3,12 @@ span::before{
     font-family: "Font Awesome 5 Free";
     display: block;
     font-weight: 900;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
+}
+
+ul{
+    list-style: none;
 }
 
 
@@ -34,21 +38,32 @@ main{
     max-width: 100%;
 }
 
+/*-------------- START sidebar------------ */
 main .sidebar{
-    background-color: rgb(196, 182, 182);
-    padding: 20px 0 0 15px;
+    background-color: rgb(0, 0, 0);
+    padding: 15px 0 0 15px;
     height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(161, 161, 161);
+    
 }
 
-ul{
-    list-style: none;
+.logo-menu{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    width: 100%;
+    flex-basis: 200px;
+    max-height: 200px;
+    /* background-color: green; */
 }
 
-
-.logo{
+.logo-menu div:first-child{
     display: flex;
     line-height: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .icon {
@@ -59,16 +74,81 @@ ul{
   background-size: cover;
 }
 
-.menu{
-    padding-bottom: 20px;
+.logo-menu ul li, .side-foot ul li{
+    display: flex;
     line-height: 30px;
+}
+
+
+#home::before{
+    content: "\f015";
+    font-size: 20px;
+}
+
+#library::before{
+    content: "\f0c5";
+    font-size: 20px;
+}
+
+#search::before{
+    content: "\f002";
+    font-size: 20px;
+
+}
+
+
+#playlist-icon::before{
+    content: "\f0fe";
+    font-size: 35px;
+}
+
+/* .side-menu{
+    display: flex;
+    flex-direction: column;
+} */
+
+.playlist{
+    /* background-color: greenyellow; */
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: auto;
+    margin-top: 10px;
 }
 
 .playlist li{
-    line-height: 30px;
+    line-height: 40px;
+}
+
+.side-foot{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: 20px;
+    /* background-color: green; */
+}
+
+.side-foot ul{
+    padding-bottom: 10px;
+}
+
+#download-app::before{
+    content: "\f0ab";
+}
+
+#user::before{
+    content: "\f2bd";
+    font-size: 25px;
+}
+
+hr{
+    margin: 5px 0 10px 0 ;
 }
 
 
+
+/*-------------------- END sidebar-------------------------- */
 /* -------------------------------------------------------- */
 .content{
     background-color: #141922;
@@ -157,7 +237,7 @@ footer .play-timing{
 .picture , .volume{
     flex-basis: 280px;
     max-width: 280px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 footer .volume{
@@ -219,7 +299,7 @@ footer .volume{
 
 .play-timing{
     flex-grow: 1;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 #go-foward::before{

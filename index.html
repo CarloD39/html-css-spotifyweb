@@ -12,25 +12,27 @@
 <body>
 
     <div class="container-fluid">
-
         <main class="row">
 
             <div class="sidebar col-lg-2">
+                <div class="logo-menu">
 
-                <ul class="logo">
-                    <li class="icon"></li>
-                    <li>SPOTIFY</li>
-                </ul>
+                    <div>
+                        <div class="icon"></div>
+                        <div class="title">SPOTIFY</div>
+                    </div>
+                    <ul>
+                        <li><span id="home"></span> Home</li>
+                        <li><span id="search"></span> Cerca</li>
+                        <li><span id="library"></span> La tua Libreria</li>
+                        <li> PLAYLIST</li>
+                        <li><span id="playlist-icon"></span> Crea Playlist</li>
+                    </ul>
+                    
+                </div>
 
-                <ul class="menu">
-                    <li>Home</li>
-                    <li>Cerca</li>
-                    <li>La tua Libreria</li>
-                </ul>
-
+                
                 <ul class="playlist">
-                    <li>PLAYLIST</li>
-                    <li>CREA PLAYLIST</li>
                     <li>Nome playslist</li>
                     <li>Nome playslist</li>
                     <li>Nome playslist</li>
@@ -41,12 +43,19 @@
                 </ul>
 
 
+                <div class="side-foot">
+                    <ul>
+                        <li><span id="download-app"></span> Installa app</li>
+                        <hr>
+                        <li><span id="user"></span>John Doe</li>
+                    </ul>
+
+                </div>
             </div>
 
 
 
-
-
+            <!-- Content right -->
             <div class="content col-lg-10 ">
 
                 <div class="topbar">
@@ -71,16 +80,10 @@
                     </div>
                 </div>
             </div>
-
-
-
         </main>
 
 
-
-
-
-
+        <!-- Start footer -->
         <footer>
 
             <div class="picture">
@@ -102,7 +105,6 @@
 
 
             <div class="play-timing">
-
                 <div class="control-play">
                     <span id="random"></span>
                     <span id="go-back"></span>
@@ -120,16 +122,13 @@
 
 
             <div class="volume">
-                
                 <span id="list-songs"></span>
                 <span id="tv"></span>
                 <span id="volum"></span>
                 <div id="volum-bar"></div>
-                
             </div>
 
         </footer>
-
     </div>
     
 </body>
