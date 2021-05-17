@@ -237,8 +237,6 @@ main .sidebar{
 }
 /* --------------------------- */
 
-
-
 .played-media{
     background-color: darkcyan;
     padding:20px 10px 0;
@@ -262,8 +260,17 @@ main .sidebar{
     height: 180px;
     border: 1px solid white ;
     margin-top: 20px;
+    text-align: center;
 }
 
+.cover{
+    width: 80%;
+    text-align: center;
+}
+
+.cover img{
+    width: 100%;
+}
 
 /* ------------------------------------------------------------- */
 /*----------------------------------------------------------------  */
@@ -486,9 +493,6 @@ footer .volume{
     .xs-no{
         display: none;
     }
-
-
-
 
     .picture-footer{
         width: 30px;
