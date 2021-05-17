@@ -215,7 +215,7 @@ main .sidebar{
 .content nav{
     margin: 100px 0 auto;
     max-width: 100%;
-    background-color: darkgoldenrod;
+    /* background-color: darkgoldenrod; */
 }
 
 .content nav ul{
@@ -238,7 +238,7 @@ main .sidebar{
 /* --------------------------- */
 
 .played-media{
-    background-color: darkcyan;
+    /* background-color: darkcyan; */
     padding:20px 10px 0;
 }
 
@@ -248,7 +248,7 @@ main .sidebar{
 }
 
 .movies-albums{
-    background-color: darkgreen;
+    /* background-color: darkgreen; */
     padding: 5px 0 20px;
     display: flex;
     flex-wrap: wrap;
@@ -257,20 +257,36 @@ main .sidebar{
 .active-item{
     width: calc(100% / 6 - 15px);
     margin-right: 15px;
-    height: 180px;
-    border: 1px solid white ;
+    /* height: 180px; */
+    /* border: 1px solid white ; */
     margin-top: 20px;
     text-align: center;
 }
 
 .cover{
-    width: 80%;
-    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
 }
 
 .cover img{
     width: 100%;
 }
+
+.item-text h4{
+    margin-bottom: 5px;
+    color: white;
+}
+
+.item-text span, .played-media span{
+    font-size: 14px;
+    color: gray;
+}
+
+.played-media h2{
+    color: white;
+}
+
+
 
 /* ------------------------------------------------------------- */
 /*----------------------------------------------------------------  */
