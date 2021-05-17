@@ -1,3 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  body{
+    font-family: 'Ubuntu', sans-serif;
+}
+  
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  [class*="col-"] {
+    flex: 0 0 auto;
+  }
+  
+  
+  
+  .col-lg, col {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+
 
 span::before{
     font-family: "Font Awesome 5 Free";
@@ -16,12 +52,10 @@ ul{
 .container-fluid{
     width: 100%;
     max-height: 100vh;
-    background-color: coral;
 }
 
 main{
     height: calc(100vh - 80px);
-    background-color:darkorange;;
 }
 
 .row{
@@ -58,7 +92,7 @@ main .sidebar{
 .logo-menu div:first-child{
     display: flex;
     line-height: 40px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .icon {
@@ -75,11 +109,10 @@ main .sidebar{
 }
 
 
-.logo-menu ul li, .side-foot ul li{
+.logo-menu .points div, .side-foot div{
     display: flex;
     line-height: 25px;
 }
-
 
 .home::before{
     content: "\f015";
@@ -119,7 +152,7 @@ main .sidebar{
 }
 
 .playlist li{
-    line-height: 35px;
+    line-height: 30px;
 }
 
 .side-foot{
@@ -130,7 +163,7 @@ main .sidebar{
     padding-right: 20px;
 }
 
-.side-foot ul{
+.side-foot {
     padding-bottom: 10px;
 }
 
@@ -145,12 +178,12 @@ main .sidebar{
     margin-right: 5px;
 }
 
-hr{
+.line-side{
     margin: 5px 0 10px 0 ;
 }
 
 /*-------------------- END sidebar-------------------------- */
-/* -------------------------------------------------------- */
+/* --------------------START Content------------------------ */
 .content{
     background-color: #141922;
     height: 100%;
@@ -160,42 +193,73 @@ hr{
 /* -----------------------*/
 
 .topbar{
-    text-align: right;
-    padding: 20px 20px;
     position: fixed;
     width: calc(100% - 200px);
     height: 80px;
-    background-color: rgb(45, 45, 180, 0.9);
+    text-align: right;
+    padding: 20px 15px;
+    background-color: rgb(16, 16, 20);
 }
 
 .topbar button{
     padding: 8px 20px;
     border-radius: 15px;
+    border: 1px solid white;
+    color: white;
+    font-size: 12px;
+    background-color: rgb(16, 16, 20);
 }
 /* ---------------------- */
 
-
 .content nav{
-    margin: 90px auto;
-    border: 1px solid white;
+    margin: 100px 0 auto;
+    max-width: 100%;
+    background-color: darkgoldenrod;
 }
 
 .content nav ul{
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     color: white;
     justify-content: center;
 }
 
  nav ul li{
-    margin-left: 30px;
+    margin-left: 25px;
+    font-size: 13px;
+    line-height: 25px;
 }
 
-.albums{
-    margin: 0 auto;
-    width: 300px;
-    height: 400vh;
+.explore-content li:first-child{
+    margin-left: 0;
 }
+/* --------------------------- */
+
+
+
+.played-media{
+    background-color: darkcyan;
+    padding:25px 10px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.movies-albums{
+    background-color: darkgreen;
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.active-item{
+    width: 160px;
+    height: 190px;
+    border: 1px solid white ;
+    margin-top: 20px;
+}
+
 
 /* ------------------------------------------------------------- */
 /*----------------------------------------------------------------  */
@@ -351,8 +415,19 @@ footer .volume{
 /* finish span content */
 
 
+/* Media MD  */
 
-/* Media footer SM*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+    .movies-albums{
+        justify-content: left;
+    }
+
+}
+
+
+
+/* Media SM*/
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
 
@@ -373,37 +448,33 @@ footer .volume{
 
 }
 
-/* Media footer XS */
+/* Media XS */
 
 @media only screen and (min-width: 420px) and (max-width: 575px){
 
     .content{
-        width: calc(100% - 70px);
+        width: calc(100% - 45px);
     }
 
     .topbar{
-        width: calc(100% - 70px);
+        width: calc(100% - 45px);
     }
 
     main .sidebar{
-        width: 70px;
+        width: 45px;
     }
 
-    .title{
+    .icon{
+        width: 20px;
+        height: 20px;
+    }
+
+    .xs-no{
         display: none;
     }
 
-    .playlist{
-        display: none;
-    }
 
-    .menu-items li{
-        display: none;
-    }
 
-    .playlist-icon{
-        display: none;
-    }
 
     .picture-footer{
         width: 30px;
