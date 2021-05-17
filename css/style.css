@@ -250,11 +250,12 @@ main .sidebar{
     padding-top: 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
 }
 
 .active-item{
-    width: 160px;
+    width: calc(100% / 6 - 15px);
+    min-width: calc(100% / 6 -15px);
+    margin-right: 15px;
     height: 190px;
     border: 1px solid white ;
     margin-top: 20px;
@@ -419,8 +420,13 @@ footer .volume{
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
 
+
     .movies-albums{
-        justify-content: left;
+        justify-content:start;
+    }
+
+    .active-item{
+        width: calc(100% / 4 - 15px);
     }
 
 }
