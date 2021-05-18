@@ -5,36 +5,25 @@
     position: relative;
   }
 
-  body{
-    font-family: 'Ubuntu', sans-serif;
+body{
+    font-family: 'Montserrat', serif;
 }
   
-  .container-fluid {
+.container-fluid {
     width: 100%;
     max-width: 100%;
   }
   
-  
-  .row {
+.row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  
-  [class*="col-"] {
-    flex: 0 0 auto;
-  }
-  
-  
-  
-  .col-lg, col {
-    flex-grow: 1;
-    flex-basis: 0;
-    max-width: 100%;
-  }
+}
 
-
-
+main{
+    height: calc(100vh - 80px);
+}
+  
 span::before{
     font-family: "Font Awesome 5 Free";
     display: block;
@@ -47,29 +36,12 @@ ul{
     list-style: none;
 }
 
-
-/* ---------------utility provvsoria */
-.container-fluid{
-    width: 100%;
-    max-height: 100vh;
+.turn-white:hover{
+    color: white;
+    cursor: pointer;
 }
 
-main{
-    height: calc(100vh - 80px);
-}
 
-.row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.col-lg{
-    flex-grow: 1;
-    flex-basis: 0;
-    max-width: 100%;
-}
-/* ------------------------------------------ */
 /*-------------- START sidebar------------ */
 main .sidebar{
     background-color: rgb(0, 0, 0);
@@ -82,36 +54,36 @@ main .sidebar{
     color: rgb(161, 161, 161);   
 }
 
-.logo-menu{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 10px;
-    width: 100%;
-}
-
-.logo-menu div:first-child{
+.logo-menu > .icon-title{
     display: flex;
     line-height: 40px;
-    padding-bottom: 15px;
+    padding-bottom: 15px;;
 }
 
 .icon {
-  height: 40px;
-  width: 40px;
-  margin-right: 10px;
-  background-image: url(../img/logo.svg);
-  background-size: cover;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    background-image: url(../img/logo.svg);
+    background-size: cover;
 }
 
 .title{
     color: white;
     font-weight: bolder;
+    font-size: 25px;
 }
 
+.points{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
 .logo-menu .points div, .side-foot div{
     display: flex;
     line-height: 25px;
+    padding-bottom: 5px;
 }
 
 .home::before{
@@ -163,10 +135,6 @@ main .sidebar{
     padding-right: 20px;
 }
 
-.side-foot {
-    padding-bottom: 10px;
-}
-
 #download-app::before{
     content: "\f0ab";
     margin-right: 5px;
@@ -181,7 +149,6 @@ main .sidebar{
 .line-side{
     margin: 5px 0 10px 0 ;
 }
-
 /*-------------------- END sidebar-------------------------- */
 /* --------------------START Content------------------------ */
 .content{
@@ -190,7 +157,6 @@ main .sidebar{
     width: calc(100% - 200px);
     overflow-y: scroll;    
 }
-/* -----------------------*/
 
 .topbar{
     position: fixed;
@@ -204,25 +170,28 @@ main .sidebar{
 
 .topbar button{
     padding: 8px 20px;
-    border-radius: 15px;
+    border-radius: 20px;
     border: 1px solid white;
     color: white;
     font-size: 12px;
     background-color: rgb(16, 16, 20);
 }
-/* ---------------------- */
+
+.topbar button:hover{
+    cursor: pointer;
+    padding: 12px 25px;
+}
 
 .content nav{
     margin: 100px 0 auto;
     max-width: 100%;
-    /* background-color: darkgoldenrod; */
 }
 
 .content nav ul{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    color: white;
+    color: gray;
     justify-content: center;
 }
 
@@ -238,7 +207,6 @@ main .sidebar{
 /* --------------------------- */
 
 .played-media{
-    /* background-color: darkcyan; */
     padding:20px 10px 0;
 }
 
@@ -248,7 +216,6 @@ main .sidebar{
 }
 
 .movies-albums{
-    /* background-color: darkgreen; */
     padding: 5px 0 20px;
     display: flex;
     flex-wrap: wrap;
@@ -257,8 +224,6 @@ main .sidebar{
 .active-item{
     width: calc(100% / 6 - 15px);
     margin-right: 15px;
-    /* height: 180px; */
-    /* border: 1px solid white ; */
     margin-top: 20px;
     text-align: center;
 }
@@ -279,9 +244,12 @@ main .sidebar{
     display: none;
 }
 
+.movies-albums:hover .active-item{
+    cursor: pointer;
+}
+
 .active-item:hover i{
     display: block;
-    cursor: pointer;
 }
 
 .active-item:hover img{
@@ -306,11 +274,7 @@ main .sidebar{
     color: white;
 }
 
-
-
-/* ------------------------------------------------------------- */
-/*----------------------------------------------------------------  */
-/* ------------------------------------------------------------ */
+/*------Start footer------*/
 footer{
     height: 80px;
     background-color: #282828;
@@ -362,8 +326,12 @@ footer .play-timing{
 }
 
 footer .volume{
+    /* justify-content: space-between; */
     justify-content: flex-end;
-    justify-content: space-between;
+}
+
+.volume  span{
+    margin-left: 15px;
 }
 
 .picture-footer{
@@ -378,7 +346,7 @@ footer .volume{
     margin-left: 15px;
 }
 
-.picture-footer-name{ 
+.picture-footer-artist{ 
     font-size: 16px;
 }
 
@@ -387,53 +355,55 @@ footer .volume{
     color: gray;
 }
 
+.underline:hover{
+    text-decoration: underline white;
+}
+
 .save-brano{
     margin-left: 30px;
 }
 
-
 /* span content footer */
-#heart{
+.heart{
     color: gray;
     font-size: 12px;
     width: 50%;
 }
 
-#folder{
+.folder{
     color: gray;
     margin-left: 8px;
     font-size: 12px;
     width: 50%;
 }
 
-#random::before{
+.random::before{
     content: "\f074";
     font-size: 12px;
 }
 
-#go-back::before{
+.go-back::before{
     content: "\f048";
     font-size: 12px;
 }
 
-#play-song::before{
+.play-song::before{
     content: "\f144";
     font-size: 25px;
 }
 
+.control-play, .bar-song, .volume:hover{
+    cursor: pointer;
+}
 
-#go-foward::before{
+.go-foward::before{
     content: "\f051";
     font-size: 12px;
 }
 
-#repeat::before{
+.repeat::before{
     content: "\f01e";
     font-size: 12px;
-}
-
-.volume span{
-    margin-right: 20px;
 }
 
 #list-songs::before{
@@ -461,8 +431,7 @@ footer .volume{
 /* finish span content */
 
 
-/* Media MD  */
-
+/*------- Media MD -------- */
 @media only screen and (min-width: 768px) and (max-width: 991px){
 
 
@@ -476,11 +445,9 @@ footer .volume{
 
 }
 
-
-
 /* Media SM*/
-
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
 
     .active-item{
         width: calc(50% - 15px);
@@ -491,19 +458,29 @@ footer .volume{
         height: 40px;
     }
 
-    #heart{
+    .heart{
         display: block;
       }
       
-      #folder{
+    .folder{
          display: block;
       }
 
 }
 
 /* Media XS */
-
 @media only screen and (min-width: 0) and (max-width: 575px){
+
+
+    main .sidebar{
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .icon{
+        line-height: 25px;
+        padding-bottom: 5px;
+    }
 
     .content{
         width: calc(100% - 45px);
@@ -531,28 +508,24 @@ footer .volume{
     }
 
     .picture-footer{
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
 
-    #heart{
+    .heart{
         display: block;
-      }
+    }
       
-      #folder{
+    .folder{
          display: block;
-      }
+    }
+
+    .save-brano{
+        margin-left: 5px;
+    }
 
       .bar-song > span{
         font-size: 10px;
         margin: 0 5px;
     }
-
-      .volume span{
-        margin-right: 10px;
-    }
 }
-
-/* -------------------------------------------------------------------------------- */
-/*------------------------------------------------------------------------------  */
-/* ---------------------------------------------------------------------------- */
